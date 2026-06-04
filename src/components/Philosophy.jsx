@@ -45,7 +45,7 @@ export default function Philosophy() {
             tu contra.
           </h2>
           <p className="mt-6 text-base leading-relaxed text-muted sm:text-lg">
-            Cada línea de código es una decisión. En AYDEV México trabajamos
+            Cada línea de código es una decisión. En aydevops.mx trabajamos
             con principios de ingeniería sólidos para que tu inversión se
             traduzca en un producto mantenible, performante y listo para
             evolucionar.

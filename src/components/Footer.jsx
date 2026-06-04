@@ -1,9 +1,9 @@
 import logo from '../assets/logo.png';
 
 const EMAIL = 'ay.padilla.doval@gmail.com';
-const EMAIL_SUBJECT = 'Cotización de proyecto — AYDEV México';
+const EMAIL_SUBJECT = 'Cotización de proyecto — aydevops.mx';
 const EMAIL_BODY =
-  'Hola Amaury,\n\nMe interesa cotizar un proyecto con AYDEV México.\n\n— ';
+  'Hola Amaury,\n\nMe interesa cotizar un proyecto con aydevops.mx.\n\n— ';
 
 const buildGmailUrl = () =>
   `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
@@ -42,20 +42,20 @@ export default function Footer() {
             >
               <img
                 src={logo}
-                alt="AYDEV México"
+                alt="aydevops.mx"
                 className="h-12 w-12 object-contain drop-shadow-[0_0_24px_rgba(213,0,11,0.4)]"
               />
               <span className="flex flex-col leading-tight">
                 <span className="text-base font-black tracking-wide">
-                  AY<span className="text-accent">DEV</span>
+                  AYDEV<span className="text-accent">OPS</span>
                 </span>
                 <span className="text-[10px] font-medium uppercase tracking-[0.25em] text-muted">
-                  México
+                  .mx
                 </span>
               </span>
             </a>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted">
-              AYDEV México — Firma de desarrollo de software empresarial a la
+              aydevops.mx — Firma de desarrollo de software empresarial a la
               medida. Construimos páginas Web, CRMs, ERPs y Apps Móviles con foco en
               resultados de negocio.
             </p>
@@ -114,7 +114,7 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 text-xs text-muted sm:flex-row">
           <p>
-            © {year} AYDEV México. Todos los derechos reservados.
+            © {year} aydevops.mx. Todos los derechos reservados.
           </p>
           <p>
             Diseñado y desarrollado a la medida con{' '}

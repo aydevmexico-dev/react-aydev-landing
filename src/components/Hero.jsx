@@ -27,7 +27,7 @@ export default function Hero() {
             />
             <img
               src={logo}
-              alt="AYDEV México — Software empresarial a la medida"
+              alt="aydevops.mx — Software empresarial a la medida"
               className="h-24 w-24 object-contain drop-shadow-[0_0_40px_rgba(213,0,11,0.55)] sm:h-28 sm:w-28"
             />
           </div>
@@ -51,7 +51,7 @@ export default function Hero() {
 
           <p className="mt-8 max-w-2xl animate-fade-up text-base leading-relaxed text-muted sm:text-lg md:text-xl">
             Somos{' '}
-            <span className="font-semibold text-white">AYDEV México</span>, una
+            <span className="font-semibold text-white">aydevops.mx</span>, una
             empresa de desarrollo de software a la medida para pequeñas y medianas empresas.
             Construimos plataformas Web, CRMs, ERPs y Aplicaciones Móviles
             con arquitectura limpia, escalable y enfocada en resultados de
@@ -87,7 +87,7 @@ export default function Hero() {
                 <span className="h-2 w-2 rounded-full bg-[#febc2e]" />
                 <span className="h-2 w-2 rounded-full bg-[#28c840]" />
                 <span className="ml-3 text-[11px] font-medium text-muted">
-                  preview · plataforma.aypd.dev
+                  preview · plataforma.aydevops.mx
                 </span>
               </div>
               <div className="aspect-[16/9] w-full bg-deep">

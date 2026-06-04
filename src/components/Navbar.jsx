@@ -33,15 +33,15 @@ export default function Navbar() {
         >
           <img
             src={logo}
-            alt="AYDEV México"
+            alt="aydevops.mx"
             className="h-24 w-24 object-contain drop-shadow-[0_0_18px_rgba(213,0,11,0.45)] transition-transform duration-300 group-hover:scale-105"
           />
           <span className="hidden flex-col leading-tight sm:flex">
             <span className="text-base font-black tracking-wide">
-              AY<span className="text-accent">DEV</span>
+              AYDEV<span className="text-accent">OPS</span>
             </span>
             <span className="text-[10px] font-medium uppercase tracking-[0.25em] text-muted">
-              México
+              .mx
             </span>
           </span>
         </a>
