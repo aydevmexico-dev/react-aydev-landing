@@ -3,8 +3,15 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
   html {
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
@@ -17,6 +24,17 @@
   ::selection {
     background-color: #D5000B;
     color: #ffffff;
+  }
+
+  a,
+  button {
+    touch-action: manipulation;
+  }
+
+  button,
+  [role='tab'] {
+    user-select: none;
+    -webkit-user-select: none;
   }
 }
 
@@ -36,5 +54,34 @@
     background-size: 56px 56px;
     mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
     -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+  }
+
+  /* Scroll reveal for marketing sections — fires once, see Reveal.jsx. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+      opacity 500ms var(--ease-out),
+      transform 500ms var(--ease-out);
+  }
+
+  .reveal[data-visible] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-pulse-glow {
+    animation: none;
+  }
+
+  .reveal {
+    transform: none;
+    transition: opacity 300ms ease;
   }
 }

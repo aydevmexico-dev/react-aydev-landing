@@ -1,38 +1,26 @@
 import logo from '../assets/logo.png';
+import { buildGmailUrl, buildWhatsAppUrl } from '../lib/contact.js';
 
-const EMAIL = 'ay.padilla.doval@gmail.com';
-const EMAIL_SUBJECT = 'Cotización de proyecto — aydevops.mx';
-const EMAIL_BODY =
-  'Hola Amaury,\n\nMe interesa cotizar un proyecto con aydevops.mx.\n\n— ';
-
-const buildGmailUrl = () =>
-  `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
-    EMAIL,
-  )}&su=${encodeURIComponent(EMAIL_SUBJECT)}&body=${encodeURIComponent(
-    EMAIL_BODY,
-  )}`;
-
+// TODO: reemplazar GitHub y LinkedIn por los perfiles reales.
 const SOCIAL_LINKS = [
   { label: 'GitHub', href: 'https://github.com/' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/' },
   { label: 'Email', href: buildGmailUrl() },
-  { label: 'WhatsApp', href: 'https://wa.me/5530662066' },
+  { label: 'WhatsApp', href: buildWhatsAppUrl() },
 ];
 
 const FOOTER_LINKS = [
   { label: 'Servicios', href: '#servicios' },
-  { label: 'Filosofía', href: '#filosofia' },
-  { label: 'Inicio', href: '#inicio' },
+  { label: 'Igualas', href: '#igualas' },
+  { label: 'Resultados', href: '#resultados' },
+  { label: 'Contacto', href: '#contacto' },
 ];
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer
-      id="contacto"
-      className="relative border-t border-white/5 bg-deep"
-    >
+    <footer className="relative border-t border-white/5 bg-deep">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
           <div>
@@ -55,9 +43,9 @@ export default function Footer() {
               </span>
             </a>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted">
-              aydevops.mx — Firma de desarrollo de software empresarial a la
-              medida. Construimos páginas Web, CRMs, ERPs y Apps Móviles con foco en
-              resultados de negocio.
+              aydevops.mx — Desarrollo de software empresarial a la medida:
+              sistemas en Python y Django, pasarelas de pago, agentes de IA,
+              apps móviles y servidores administrados con igualas mensuales.
             </p>
             {/* <p className="mt-3 text-xs text-muted/80">
               Dirigida por{' '}
@@ -91,23 +79,19 @@ export default function Footer() {
               Hablemos
             </h4>
             <ul className="mt-5 grid grid-cols-2 gap-3">
-              {SOCIAL_LINKS.map((link) => {
-                const isExternal = link.href.startsWith('http');
-                return (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      {...(isExternal
-                        ? { target: '_blank', rel: 'noopener noreferrer' }
-                        : {})}
-                      className="inline-flex w-full items-center justify-between rounded-lg border border-white/10 bg-white/[0.02] px-3 py-2 text-sm text-muted transition-all duration-300 hover:border-secondary hover:text-white"
-                    >
-                      {link.label}
-                      <span aria-hidden className="text-secondary">↗</span>
-                    </a>
-                  </li>
-                );
-              })}
+              {SOCIAL_LINKS.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-full items-center justify-between rounded-lg border border-white/10 bg-white/[0.02] px-3 py-2 text-sm text-muted transition-[transform,color,border-color] duration-150 ease-out hover:border-accent/60 hover:text-white active:scale-[0.97]"
+                  >
+                    {link.label}
+                    <span aria-hidden className="text-accent">↗</span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

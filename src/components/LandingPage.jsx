@@ -1,8 +1,9 @@
 import Navbar from './Navbar.jsx';
 import Hero from './Hero.jsx';
 import Services from './Services.jsx';
-import Showcase from './Showcase.jsx';
-import Philosophy from './Philosophy.jsx';
+import Retainer from './Retainer.jsx';
+import Results from './Results.jsx';
+import Contact from './Contact.jsx';
 import Footer from './Footer.jsx';
 
 export default function LandingPage() {
@@ -12,8 +13,9 @@ export default function LandingPage() {
       <main>
         <Hero />
         <Services />
-        <Showcase />
-        <Philosophy />
+        <Retainer />
+        <Results />
+        <Contact />
       </main>
       <Footer />
     </div>
