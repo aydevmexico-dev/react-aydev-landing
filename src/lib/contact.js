@@ -1,6 +1,6 @@
 export const WHATSAPP_NUMBER = '5569633669';
 
-export const EMAIL = 'aydevmexico@gmail.com';
+export const EMAIL = 'aydevopsmexico@aydevops.mx';
 const EMAIL_SUBJECT = 'Cotización de proyecto — aydevops.mx';
 const EMAIL_BODY =
   'Hola Amaury,\n\nMe interesa cotizar un proyecto con aydevops.mx.\n\n— ';
